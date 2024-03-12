@@ -1,0 +1,176 @@
+/* ===
+PROJECT FONTS
+=== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap");
+
+/* -- VARIABLES --- */
+
+:root {
+  /* BACKGROUND COLORS */
+  --bg-primary: #0051ef;
+  --bg-secondry: #111;
+
+  /* FONT COLORS */
+  --text-white: #fff;
+  --text-black: #000;
+
+  /* FONTS  */
+  --font-primary: "Inter", sans-serif;
+}
+
+/* -- RESET PROPORTES -- */
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* -- REUSABLE CLASSES -- */
+.mainBtn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border: 2px solid #000;
+  color: #000;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  box-shadow: 2px 4px #000;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.mainBtn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background-color: #000;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.mainBtn:hover::after {
+  width: 100%;
+}
+
+.mainBtn:hover {
+  color: #fff;
+  box-shadow: none;
+}
+
+/* -- FORM -- */
+
+.formSection {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.formSection .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 60%;
+  padding: 2rem;
+  border-radius: 1rem;
+  /* border: 2px solid #000; */
+}
+
+.formSection .input-group .formHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+.formSection .input-group .formHeading .logo {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.formSection .input-group .formHeading .logo img {
+  width: 200px;
+}
+
+.formSection .input-group .control {
+  position: relative;
+  border: 2px solid #000;
+  padding: 0.7rem 1.8rem;
+  border-radius: 0.5rem !important;
+}
+
+.formSection .input-group .control label {
+  position: absolute;
+  top: -30%;
+  left: 5%;
+  display: inline-block;
+  background-color: #fff;
+  padding: 0.2rem 0.8rem;
+  font-weight: 600;
+}
+
+.formSection .input-group .allControl {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.formSection .input-group .control .form-control {
+  background-color: transparent;
+  border: 0;
+}
+
+.formSection .input-group .control .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.formSection .input-group .action .mainBtn {
+  float: right;
+}
+
+.formSection .input-group .control .socialTitle {
+  font-weight: 600;
+}
+
+.formSection .input-group .control .socialMedia {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.formSection
+  .input-group
+  .control
+  .socialMedia
+  .form-check
+  .form-check-input:checked {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+.formSection
+  .input-group
+  .control
+  .socialMedia
+  .form-check
+  .form-check-input:focus {
+  outline: 0;
+  box-shadow: none;
+}

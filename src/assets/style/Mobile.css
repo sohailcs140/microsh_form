@@ -1,0 +1,21 @@
+@media (max-width: 992px) {
+  .formSection .input-group {
+    width: 100%;
+  }
+
+  .formSection .input-group .allControl {
+    grid-template-columns: 1fr;
+  }
+
+  .formSection .input-group .action .mainBtn {
+    width: 100%;
+  }
+
+  .formSection .input-group .formHeading {
+    margin-bottom: 1rem;
+  }
+
+  .formSection .input-group .control .socialMedia {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
